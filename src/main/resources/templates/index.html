@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+          integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body style="background-color: #add5d7; margin: 40px">
+<h3> Student Record </h3>
+<table class="table" >
+    <thead>
+    <tr>
+        <th scope="col">StudentName</th>
+        <th scope="col">StudentRollno</th>
+        <th scope="col">StudentAge</th>
+        <th scope="col">StudentClass</th>
+        <th scope="col">English</th>
+        <th scope="col">Hindi</th>
+        <th scope="col">Maths</th>
+        <th scope="col">Science</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <div>
+        <tr th:each="list: ${p}">
+            <td th:text="${list.Name}"></td>
+            <td th:text="${list.rollno}"></td>
+            <td th:text="${list.Age}"></td>
+            <td th:text="${list.classname}"></td>
+            <td th:text="${list.English}"></td>
+            <td th:text="${list.Hindi}"></td>
+            <td th:text="${list.Maths}"></td>
+            <td th:text="${list.Science}"></td>
+            <td><a th:href="@{/edit-Student/{rollno}(rollno=${list.rollno})}" class="btn btn-primary">edit</a></td>
+
+            <td><a th:href="@{/deleteStudent/{rollno}(rollno=${list.rollno})}" class="btn btn-danger">delete</a></td>
+    </div>
+
+   <a th:href="@{/Add-Student}" class="btn btn-success">Add Student</a>
+</body>
+</html>

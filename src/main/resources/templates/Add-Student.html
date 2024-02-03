@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+        <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+          integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<div>
+    <form th:action="@{/addDetail}" method="post" th:object="${Student}" style="
+    width: 600px;
+    margin-left: 50px;
+    margin-right: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 706px;
+     text-align: left;
+    margin:0 auto;
+background-color: #ADD8E6">
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control"  th:field="*{Name}" aria-describedby="emailHelp">
+            <div  class="form-text"></div>
+        </div>
+        <div class="mb-3">
+                        <label class="form-label">rollno</label>
+            <input type="number" class="form-control"  th:field="*{rollno}" aria-describedby="emailHelp">
+            <div  class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input type="number" class="form-control"  th:field="*{Age}" aria-describedby="emailHelp">
+            <div  class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">classname</label>
+            <input type="number" class="form-control"  th:field="*{classname}" aria-describedby="emailHelp">
+            <div  class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">English</label>
+            <input type="number" class="form-control"  th:field="*{English}" aria-describedby="emailHelp">
+            <div  class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Hindi</label>
+            <input type="number" class="form-control"  th:field="*{Hindi}" aria-describedby="emailHelp">
+            <div  class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Maths</label>
+            <input type="number" class="form-control"  th:field="*{Maths}" aria-describedby="emailHelp">
+            <div  class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Science</label>
+            <input type="number" class="form-control"  th:field="*{Science}" aria-describedby="emailHelp">
+            <div  class="form-text"></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+</div>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
